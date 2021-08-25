@@ -1,0 +1,29 @@
+.navbar {
+   border-bottom: 3px solid #ffcc00;;
+}
+
+.navbar-brand > a {
+    color: black!important;
+}
+
+.nav-link:hover {
+    background-color: #9820cc40;
+    border: 1px solid #ffcc00;
+    border-radius: 1rem;
+    transition: background-color .5s;
+}
+
+.nav-link:not(:hover){
+    background-color: inherit;
+    transition: background-color 1s;
+    border-radius: 1rem;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.active {
+    border-bottom: 1px solid #9820cc40;
+    border-radius: 0;
+}
