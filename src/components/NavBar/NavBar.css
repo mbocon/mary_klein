@@ -1,5 +1,5 @@
 .navbar {
-   border-bottom: 3px solid #ffcc00;;
+   border-bottom: 3px solid #ffcc00;
 }
 
 .navbar-brand > a {
@@ -7,7 +7,10 @@
 }
 
 .nav-link:hover {
-    background-color: #9820cc40;
+    background-color: hsla(282, 75%, 47%, 0.5);
+    color: white!important;
+    
+
     border: 1px solid #ffcc00;
     border-radius: 1rem;
     transition: background-color .5s;
@@ -24,6 +27,7 @@
 }
 
 .active {
-    border-bottom: 1px solid #9820cc40;
-    border-radius: 0;
+    background: hsla(282, 73%, 46%, 0.5)!important;
+    border: 1px solid #ffcc00;
+    color: white!important;
 }
