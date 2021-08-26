@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
+import ContactForm from "./components/ContactForm/ContactForm";
 import { Route, Switch } from "react-router-dom";
 
 function App(props) {
@@ -31,6 +32,7 @@ function App(props) {
          <main className="main">
             <Switch>
                <Route exact path="/" render={() => <Home />} />
+               <Route exact path="/contact" render={() => <ContactForm theme={theme} />} />
             </Switch>
          </main>
          <footer className="footer">
