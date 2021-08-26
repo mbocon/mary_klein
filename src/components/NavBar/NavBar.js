@@ -1,34 +1,42 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
-import $ from "jquery";
+
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
+// import $ from "jquery";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./NavBar.css";
+import logo from "../../Images/horseshoe.png";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 const NavBar = props => {
-   function handleClick(e) {
-      if (e.target.innerText === "Mary Klein") {
-         $(".active").removeClass("active");
-         $(".home-link").addClass("active");
-      } else {
-         $(".home-link").removeClass("active");
-         $(e.target).addClass("active");
-      }
-   }
-
+  
    return (
-      <Navbar collapseOnSelect expand="lg" bg="light">
+      <Navbar
+         collapseOnSelect
+         expand="lg"
+         bg={props.theme === "dark" ? "dark" : "light"}
+         variant={props.theme === "dark" ? "dark" : "light"}
+      >
          <Container>
             <Navbar.Brand>
-               <Nav.Link
-                  eventKey="0"
-                  as={Link}
-                  to="/"
-                  className="navbar-link"
-                  onClick={handleClick}
-               >
-                  Mary Klein
+               <Nav.Link eventKey="0" as={Link} to="/" className="navbar-link">
+                  <img
+                     src={logo}
+                     alt="logo of horseshoe with horse head"
+                     className="navbar-logo"
+                     style={{
+                        background: "#CB90E4",
+                        borderRadius: "5rem",
+                        padding: "5px",
+                     }}
+                  />{" "}
+                  M.K.K.
                </Nav.Link>
             </Navbar.Brand>
+            <Nav.Item>
+               <Button className="theme-btn" onClick={props.toggleTheme}>
+                  {props.theme === "dark" ? <FiSun /> : <FiMoon />}
+               </Button>
+            </Nav.Item>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="ml-auto">
@@ -45,7 +53,6 @@ const NavBar = props => {
                      as={Link}
                      to="/services"
                      className="navbar-link"
-                     onClick={handleClick}
                   >
                      Services & Prices
                   </Nav.Link>
@@ -54,7 +61,6 @@ const NavBar = props => {
                      as={Link}
                      to="/case_studies"
                      className="navbar-link"
-                     onClick={handleClick}
                   >
                      Case Studies
                   </Nav.Link>
@@ -63,7 +69,6 @@ const NavBar = props => {
                      as={Link}
                      to="/contact"
                      className="navbar-link"
-                     onClick={handleClick}
                   >
                      Contact
                   </Nav.Link>

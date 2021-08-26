@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import NavBar from "./components/NavBar/NavBar";
@@ -7,17 +7,26 @@ import Home from "./components/Home/Home";
 import { Route, Switch } from "react-router-dom";
 
 function App(props) {
-   /* local variables */
-   /* hooks */
+  const [theme, setTheme] = useState("dark");
+   
+  function toggleTheme(e) {
+     e.preventDefault();
+
+     if (theme === "dark") {
+        setTheme("light");
+        
+     } else {
+        setTheme("dark");
+     }
+  }
 
    useEffect(() => {
-      console.log('page loaded');
    }, []);
 
    return (
       <div className="App">
          <header className="header">
-            <NavBar />
+            <NavBar toggleTheme={toggleTheme} theme={theme} />
          </header>
          <main className="main">
             <Switch>
@@ -25,7 +34,7 @@ function App(props) {
             </Switch>
          </main>
          <footer className="footer">
-            <Footer />
+            <Footer toggleTheme={toggleTheme}  theme={theme}/>
          </footer>
       </div>
    );
