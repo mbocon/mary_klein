@@ -1,4 +1,3 @@
-
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 // import $ from "jquery";
 import { Link } from "react-router-dom";
@@ -8,7 +7,6 @@ import logo from "../../Images/horseshoe.png";
 import { FiSun, FiMoon } from "react-icons/fi";
 
 const NavBar = props => {
-  
    return (
       <Navbar
          collapseOnSelect
@@ -66,6 +64,14 @@ const NavBar = props => {
                   </Nav.Link>
                   <Nav.Link
                      eventKey="4"
+                     as={Link}
+                     to="/gallery"
+                     className="navbar-link"
+                  >
+                     Gallery
+                  </Nav.Link>
+                  <Nav.Link
+                     eventKey="5"
                      as={Link}
                      to="/contact"
                      className="navbar-link"

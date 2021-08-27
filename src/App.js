@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
+import Gallery from "./components/Gallery/Gallery";
 import ContactForm from "./components/ContactForm/ContactForm";
 import { Route, Switch } from "react-router-dom";
 
@@ -33,6 +34,7 @@ function App(props) {
             <Switch>
                <Route exact path="/" render={() => <Home />} />
                <Route exact path="/contact" render={() => <ContactForm theme={theme} />} />
+               <Route exact path="/gallery" render={() => <Gallery theme={theme} />} />
             </Switch>
          </main>
          <footer className="footer">

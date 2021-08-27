@@ -5,9 +5,15 @@
    background-color: #212529;
    width: 50%;
    margin: 5rem auto;
-   color: #cb90e4;
+   color: purple;
    padding-top: 2rem;
    box-shadow: 1px 1px 10px 1px #cb90e4;
+}
+
+.contact-page-h1 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #800080;
 }
 
 .contact-form {
@@ -51,7 +57,6 @@
    justify-content: center;
    border-radius: 1rem;
    background-color: #cb90e4;
-   color: #fff;
    border: none !important;
    outline: none !important;
 }

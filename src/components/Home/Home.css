@@ -25,7 +25,7 @@
 .home-content {
    width: 50%;
    height: 350px; /* Must specify a height */
-   background-position: center; /* Center the image */
+   background-position: center; /* Center the Img */
    background-repeat: no-repeat; /* Do not repeat the image */
    background-size: cover; /* Resize the background image to cover the entire container */
 }
@@ -49,15 +49,15 @@
 
 
 .home-img-1 {
-   background-image: url("https://images.unsplash.com/photo-1592340067055-1e4675ac3c24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+   background-image: url("../../Images/kneeling.JPG");
 }
 
 .home-img-2 {
-   background-image: url("https://images.unsplash.com/photo-1456419753477-6950a7f45546?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1506&q=80");
+   background-image: url("../../Images/hammering.JPG");
 }
 
 .home-img-3 {
-   background-image: url("https://images.unsplash.com/photo-1616162205583-e9a75b8da695?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80");
+   background-image: url("../../Images/furnace.JPG");
 }
 
 .info {

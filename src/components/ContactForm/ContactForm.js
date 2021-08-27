@@ -120,66 +120,78 @@ export default function ContactForm(props) {
    }
 
    return (
-      <div className="contact" style={{background: props.theme === "dark" ? "#212529" : "#F8F9FA" }}>
-         {messageSent ? (
-            <div className="alert animated fadeInUp">
-               Your message has been sent
-            </div>
-         ) : (
-            ""
-         )}
-         <form className="contact-form" onSubmit={sendEmail}>
-            <label htmlFor="name">
-               Name{" "}
-               <span className={isFilled.name === true ? "filled" : "required"}>
-                  <FontAwesomeIcon icon={faCircle} />
-               </span>
-            </label>
-            <input
-               type="text"
-               name="user_name"
-               placeholder="Name"
-               id="name"
-               autoFocus
-               onChange={filled}
-               required
-            />
+      <div className="contact-page">
+         <h1 className="contact-page-h1">Send me a message or leave a review!</h1>
+         <div
+            className="contact"
+            style={{
+               background: props.theme === "dark" ? "#212529" : "#F8F9FA",
+            }}
+         >
+            {messageSent ? (
+               <div className="alert animated fadeInUp">
+                  Your message has been sent
+               </div>
+            ) : (
+               ""
+            )}
+            <form className="contact-form" onSubmit={sendEmail}>
+               <label htmlFor="name" style={{color: props.theme === "dark" ? "#cb90e4" : "purple" }}>
+                  Name{" "}
+                  <span
+                     className={isFilled.name === true ? "filled" : "required"}
+                  >
+                     <FontAwesomeIcon icon={faCircle} />
+                  </span>
+               </label>
+               <input 
+                  type="text"
+                  name="user_name"
+                  placeholder="Name"
+                  id="name"
+                  autoFocus
+                  onChange={filled}
+                  required
+               />
 
-            <label htmlFor="email">
-               Email{" "}
-               <span
-                  className={isFilled.email === true ? "filled" : "required"}
-               >
-                  <FontAwesomeIcon icon={faCircle} />
-               </span>
-            </label>
-            <input
-               type="email"
-               name="user_email"
-               placeholder="Email"
-               id="email"
-               onChange={filled}
-               required
-            />
+               <label htmlFor="email" style={{color: props.theme === "dark" ? "#cb90e4" : "purple" }}>
+                  Email{" "}
+                  <span
+                     className={isFilled.email === true ? "filled" : "required"}
+                  >
+                     <FontAwesomeIcon icon={faCircle} />
+                  </span>
+               </label>
+               <input
+                  type="email"
+                  name="user_email"
+                  placeholder="Email"
+                  id="email"
+                  onChange={filled}
+                  required
+               />
 
-            <label htmlFor="message">
-               Message{" "}
-               <span
-                  className={isFilled.message === true ? "filled" : "required"}
-               >
-                  <FontAwesomeIcon icon={faCircle} />
-               </span>
-            </label>
-            <textarea
-               name="message"
-               placeholder="Your message..."
-               id="message"
-               onChange={filled}
-               required
-            />
+               <label htmlFor="message" style={{color: props.theme === "dark" ? "#cb90e4" : "purple" }}>
+                  Message{" "}
+                  <span
+                     className={
+                        isFilled.message === true ? "filled" : "required"
+                     }
+                  >
+                     <FontAwesomeIcon icon={faCircle} />
+                  </span>
+               </label>
+               <textarea
+                  name="message"
+                  placeholder="Your message..."
+                  id="message"
+                  onChange={filled}
+                  required
+               />
 
-            <input type="submit" value="Send" />
-         </form>
+               <input type="submit" value="Send" />
+            </form>
+         </div>
       </div>
    );
 }
